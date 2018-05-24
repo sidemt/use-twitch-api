@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Use the Twitchtv JSON API | freeCodeCamp</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <html>
+
+<head>
+  <title>Use the Twitchtv JSON API (freeCodeCamp Project)</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=David+Libre|Ubuntu" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!--  .container-fluid for a full width container, spanning the entire width of the viewport.  -->
+  <div class="container-fluid p-1">
+    <header class="mt-3 mb-10 mx-center text-center">
+      <h1>Wikipedia Viewer</h1>
+    </header>
+
+    <!--
+      d-flex: create a flexbox container and transform direct children elements into flex items
+      flex-column: set a vertical direction
+      justify-content-center: align items center
+    -->
+    <main role="main" class="d-flex flex-column justify-content-center cover">
+      <!-- <main> includes random button, search form and results -->
+
+      <div class="row">
+        <div class="col-lg">
+          <!-- left margin -->
+        </div>
+
+        <div id="initialItems" class="mx-auto col-lg-4">
+          <!-- includes random button and search form -->
+          <div id="randomBtn" class="m-2">
+            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="btn btn-secondary btn-block">Click here for a random article</a>
+          </div>
+          <!-- div #randomBtn ends -->
+
+          <div id="searchBox">
+            <!-- search form -->
+            <form id="searchForm">
+              <!-- this id is used in JS -->
+              <!-- 
+                d-flex: create a flex box
+                flex-row: place direct child items horizontally
+              -->
+              <div class="form-group d-flex flex-row">
+                <input id="textBox" type="text" placeholder="Search..." class="form-control m-2">
+                <button id="searchBtn" type="submit" class="btn btn-primary m-2"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+          <!-- div #searchBox ends -->
+        </div>
+        <!-- div #initialItems ends -->
+
+        <div class="col-lg">
+          <!-- right margin -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg">
+          <!-- left margin -->
+        </div>
+        <div id="results" class="col-lg-7 d-flex flex-column justify-content-center">
+          <!-- the search results will be displayed here -->
+        </div>
+        <div class="col-lg">
+          <!-- right margin -->
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="">
+      <div class="inner">
+        <p class="text-center">
+          This page was built by <a href="https://twitter.com/siideemt" target="_blank">@siideemt</a> as a code learning project at <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a>
+        </p>
+        
+        <p class="text-center">
+          Visit <a href="https://ontheneworbit.blogspot.jp/" target="_blank">my blog</a> if you are interested
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
