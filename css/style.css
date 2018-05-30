@@ -9,16 +9,6 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
 /*
  * Base structure
  */
@@ -36,8 +26,7 @@ body {
   -webkit-box-pack: center;
   justify-content: center;
   color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  font-family: 'David Libre', cursive;
+  font-family: "Ubuntu", cursive;
 }
 
 /*
@@ -45,6 +34,7 @@ body {
  */
 header {
   margin-bottom: 2rem;
+  font-family: "Press Start 2P", cursive;
 }
 
 /*
@@ -52,33 +42,36 @@ header {
  */
 .cover {
   padding: 0 1.5rem;
-  font-family: 'Ubuntu', cursive;
+  font-family: "Ubuntu", cursive;
   justify-content: center;
 }
-.cover .btn {
-  padding: .75rem;
-  font-weight: 500;
-}
 
-#initialItems {
-  min-width: 18rem;
-}
-
-#searchBtn {
-  padding: .75rem 1rem;
-}
-
-.card, .card-body, .card-title {
+.card,
+.card-body,
+.card-title {
   color: #222;
-  text-shadow: none; /* Prevent inheritance from `body` */
   justify-content: left;
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+a:hover div{
+  color: #06c;
+}
+
+div.card-body em {
+  color: #888;
 }
 
 /*
  * Footer
  */
 footer {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   margin-top: 2rem;
+  font-family: "Press Start 2P", cursive;
+  justify-content: center;
 }

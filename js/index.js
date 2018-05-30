@@ -1,5 +1,12 @@
 $(document).ready(function() {
-  var usernames = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp"];
+  var usernames = [
+    "ESL_SC2",
+    "OgamingSC2",
+    "cretetion",
+    "freecodecamp",
+    "cosmoquestx",
+    "starstryder"
+  ];
   var offlineUsers = [];
   var results = "";
   var channelResults = "";
@@ -16,8 +23,6 @@ $(document).ready(function() {
       timeout: 10000,
       // Success handler
       success: function(data) {
-        //results = results + "<p>" + JSON.stringify(data) + "</p>";
-
         if (data.stream === null) {
           // When Offline
           $.get({
@@ -33,10 +38,16 @@ $(document).ready(function() {
             // Success handler
             success: function(data) {
               results =
-                results + createPanel(data.display_name, data.logo, data.url, "Offline");
+                results +
+                createPanel(
+                  data.display_name,
+                  data.logo,
+                  data.url,
+                  "<em>Offline</em>"
+                );
             }, // end success handler
             error: function() {
-              results = results + "<p> Could not retreave channel data</p>";
+              results = results + "<p>An error has occured.</p>";
             }
           }); // end ajax
         } else {
@@ -46,13 +57,13 @@ $(document).ready(function() {
             createPanel(
               data.stream.channel.display_name,
               data.stream.channel.logo,
-            data.stream.channel.url,
+              data.stream.channel.url,
               data.stream.channel.status
             );
         } // end if
       }, // end success handler
       error: function() {
-        $("#results").html("An error has occured.");
+        results = results + "<p>An error has occured.</p>";
       }
     }); // end ajax
   } // end for
@@ -60,24 +71,30 @@ $(document).ready(function() {
   // a handler to be called when all Ajax requests have completed
   $(document).ajaxStop(function() {
     $("#results").html(results);
-    console.log("Offline Users: " + offlineUsers);
-    // $("#channels").html(channelResults);
   });
 
   // HTMLに成型して出力する関数
   function createPanel(displayName, logo, link, status) {
     var html =
-      "<div>" +
-      "<a href=\"" + link + "\" target=\"_blank\">" +
-      displayName +
-      "</a>" +
-      '<img src="' +
+      '<a href="' +
+      link +
+      '" target="_blank">' +
+      '<div class="card mb-2">' +
+      '<div class="card-body row justify-content-center align-items-center">' +
+      '<div class="col-lg-1 align-self-center logo"><img class="img-fluid rounded" src="' +
       logo +
-      '">' +
-      "<p>" +
+      '"></div>' +
+      '<div class="col-lg-2">' +
+      "<strong>" +
+      displayName +
+      "</strong>" +
+      "</div>" +
+      '<div class="col-lg-9">' +
       status +
-      "</p>" +
-      "</div>";
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "</a>";
 
     return html;
   }
